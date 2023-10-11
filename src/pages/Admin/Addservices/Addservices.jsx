@@ -59,7 +59,7 @@ const AddServices = () => {
 
   const getAllservices = () => {
     axios
-      .get("http://localhost:5000/services")
+      .get("https://wash-my-ride.onrender.com/services")
       .then((result) => {
         dispatch(setServices(result.data.services));
       })
@@ -122,7 +122,7 @@ const AddServices = () => {
                   onClick={() => {
                     axios
                       .post(
-                        "http://localhost:5000/services",
+                        "https://wash-my-ride.onrender.com/services",
                         {
                           name: serviceName,
                           img: serviceImg,
@@ -237,7 +237,7 @@ const AddServices = () => {
                               onClick={() => {
                                 axios
                                   .put(
-                                    `http://localhost:5000/services/${id}`,
+                                    `https://wash-my-ride.onrender.com/services/${id}`,
                                     {
                                       name: serviceName,
                                       img: serviceImg,
@@ -286,7 +286,7 @@ const AddServices = () => {
                             onClick={() => {
                               axios
                                 .delete(
-                                  `http://localhost:5000/services/${id}`,
+                                  `https://wash-my-ride.onrender.com/services/${id}`,
                                   {
                                     headers: {
                                       Authorization: `Bearer ${token}`,

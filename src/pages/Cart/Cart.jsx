@@ -41,7 +41,7 @@ const Cart = () => {
   const order = useSelector((state) => state.order.order);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/orders/${order.id}`, {
+      .get(`https://wash-my-ride.onrender.com/orders/${order.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ const Cart = () => {
 
   const handleDeleteOrder = (orderId) => {
     axios
-      .delete(`http://localhost:5000/orders/${orderId}`, {
+      .delete(`https://wash-my-ride.onrender.com/orders/${orderId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

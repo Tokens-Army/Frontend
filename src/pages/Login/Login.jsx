@@ -45,7 +45,7 @@ const Login = () => {
 
   const loginHandler = async () => {
     try {
-      const result = await axios.post("http://localhost:5000/users/login", {
+      const result = await axios.post("https://wash-my-ride.onrender.com/users/login", {
         email,
         password,
       });

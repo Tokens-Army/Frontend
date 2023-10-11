@@ -40,7 +40,7 @@ function getStepContent(step) {
                   selectedDate.splice(5, 2);
                   axios
                     .put(
-                      `http://localhost:5000/orders/update_time/${order_id}`,
+                      `https://wash-my-ride.onrender.com/orders/update_time/${order_id}`,
                       {
                         scheduled_time: selectedDate.join(" "),
                       }

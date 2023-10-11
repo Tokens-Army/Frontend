@@ -43,7 +43,7 @@ const AddServices = () => {
   const token = useSelector((state) =>state.login.token);
   const getAllusers = () => {
     axios
-      .get("http://localhost:5000/users")
+      .get("https://wash-my-ride.onrender.com/users")
       .then((result) => {
         dispatch(setAdmins(result.data.admins));
       })
@@ -118,7 +118,7 @@ const AddServices = () => {
                           onClick={() => {
                             axios
                               .put(
-                                `http://localhost:5000/users/delete/${admin.id}`,
+                                `https://wash-my-ride.onrender.com/users/delete/${admin.id}`,
                                 {
                                   headers: {
                                     Authorization: `Bearer ${token}`,

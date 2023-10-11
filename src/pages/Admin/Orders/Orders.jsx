@@ -32,7 +32,7 @@ const Orders = () => {
   const [details, setDetails] = useState("");
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/orders`, {
+      .get(`https://wash-my-ride.onrender.com/orders`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -71,7 +71,7 @@ const Orders = () => {
                   onClick={() => {
                     axios
                       .get(
-                        `http://localhost:5000/orders/orderDetails/${ord.id}`
+                        `https://wash-my-ride.onrender.com/orders/orderDetails/${ord.id}`
                       )
                       .then((results) => {
                         handleOpen();

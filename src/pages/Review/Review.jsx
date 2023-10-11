@@ -21,7 +21,7 @@ const Review = () => {
   let totalPrice = 0;
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/orders/${order.id}`, {
+      .get(`https://wash-my-ride.onrender.com/orders/${order.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

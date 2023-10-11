@@ -89,7 +89,7 @@ const Home = () => {
                                 onClick={() => {
                                   axios
                                     .post(
-                                      `http://localhost:5000/orders/${service.id}`,
+                                      `https://wash-my-ride.onrender.com/orders/${service.id}`,
                                       { total_price: service.price },
                                       {
                                         headers: {
@@ -131,7 +131,7 @@ const Home = () => {
 };
 
 export const serviceLoader = async () => {
-  const result = axios.get("http://localhost:5000/services").then((result) => {
+  const result = axios.get("https://wash-my-ride.onrender.com/services").then((result) => {
     return result.data.services;
   });
   return { result };

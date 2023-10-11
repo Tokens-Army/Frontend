@@ -91,7 +91,7 @@ const Location = (props) => {
         variant="contained"
         onClick={() => {
           axios
-            .put(`http://localhost:5000/orders/location/${order.id}`, {
+            .put(`https://wash-my-ride.onrender.com/orders/location/${order.id}`, {
               location: JSON.stringify(myLoc),
             })
             .then((result) => {

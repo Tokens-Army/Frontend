@@ -27,7 +27,7 @@ const Addemployeestoorders = () => {
     const dispatch = useDispatch()
     const data = useSelector((state)=>state.employees.data)
     useEffect(()=>{
-        axios.get("http://localhost:5000/orders/employees/employees")
+        axios.get("https://wash-my-ride.onrender.com/orders/employees/employees")
         .then((results)=>{
             dispatch(setData(results.data))
         })
@@ -92,7 +92,7 @@ const Addemployeestoorders = () => {
                 <div>{employee.availability}</div>
                 <button onClick={()=>{
                     
-                    axios.put(`http://localhost:5000/orders/addemployees/${order.id}/${employee.id}`)
+                    axios.put(`https://wash-my-ride.onrender.com/orders/addemployees/${order.id}/${employee.id}`)
                     .then((results)=>{
                        
                         dispatch(addEmployee({id:order.id,employee_id:employee.id,order_status:order.order_status}))

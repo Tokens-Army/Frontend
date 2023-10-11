@@ -145,7 +145,7 @@ const Mainadmincomponent = () => {
     };
     const dispatch = useDispatch()
     useEffect(()=>{
-        axios.get("http://localhost:5000/orders/pendingorders/count",{
+        axios.get("https://wash-my-ride.onrender.com/orders/pendingorders/count",{
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -158,7 +158,7 @@ const Mainadmincomponent = () => {
         })
     },[])   
     useEffect(()=>{
-      axios.get("http://localhost:5000/orders/")
+      axios.get("https://wash-my-ride.onrender.com/orders/")
       .then((results)=>{
           dispatch(setOrders(results.data.orders))
       })

@@ -19,7 +19,7 @@ const Messages = ({ socket, user_id, admin, user }) => {
     if (allMessages.length === 0) {
       if (admin) {
         axios
-          .get(`http://localhost:5000/users/message/${user.id}/${user_id}`)
+          .get(`https://wash-my-ride.onrender.com/users/message/${user.id}/${user_id}`)
           .then((result) => {
             // console.log();
             setAllMessages(result.data.allMessages);
@@ -29,7 +29,7 @@ const Messages = ({ socket, user_id, admin, user }) => {
           });
       } else {
         axios
-          .get(`http://localhost:5000/users/message/${user_id}`)
+          .get(`https://wash-my-ride.onrender.com/users/message/${user_id}`)
           .then((result) => {
             // console.log();
             setAllMessages(result.data.allMessages);
@@ -180,7 +180,7 @@ const Messages = ({ socket, user_id, admin, user }) => {
                   onClick={() => {
                     sendMessage();
                     axios
-                      .post(`http://localhost:5000/users/message/${user_id}`, {
+                      .post(`https://wash-my-ride.onrender.com/users/message/${user_id}`, {
                         to: "7",
                         message,
                       })

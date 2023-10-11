@@ -42,7 +42,7 @@ const AdminMessage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users/users")
+      .get("https://wash-my-ride.onrender.com/users/users")
       .then((result) => {
         setAllUsers(result.data.users);
       })

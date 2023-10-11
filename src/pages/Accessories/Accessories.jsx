@@ -129,7 +129,7 @@ const Accessories = () => {
                                 onClick={() => {
                                   axios
                                     .post(
-                                      `http://localhost:5000/orders/${order.id}/${accessory.id}`
+                                      `https://wash-my-ride.onrender.com/orders/${order.id}/${accessory.id}`
                                     )
                                     .then((result) => {
                                       setOpen(true);
@@ -159,7 +159,7 @@ const Accessories = () => {
 
 export const accessoriesLoader = async () => {
   const result = axios
-    .get("http://localhost:5000/accessories")
+    .get("https://wash-my-ride.onrender.com/accessories")
     .then((result) => {
       return result.data.result;
     })

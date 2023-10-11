@@ -58,7 +58,7 @@ const Register = () => {
     };
     const { firstName, lastName, email, password } = userData;
     axios
-      .post("http://localhost:5000/users/login", {
+      .post("https://wash-my-ride.onrender.com/users/login", {
         email,
         password,
       })
@@ -104,7 +104,7 @@ const Register = () => {
       ) {
         if (password.length >= 8) {
           axios
-            .post("http://localhost:5000/users/register", {
+            .post("https://wash-my-ride.onrender.com/users/register", {
               firstName,
               lastName,
               email,
@@ -115,7 +115,7 @@ const Register = () => {
               if (result.data) {
                 setMessage("");
                 axios
-                  .post("http://localhost:5000/users/login", {
+                  .post("https://wash-my-ride.onrender.com/users/login", {
                     email,
                     password,
                   })

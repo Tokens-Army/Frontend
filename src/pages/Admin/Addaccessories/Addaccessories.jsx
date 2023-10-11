@@ -57,7 +57,7 @@ const AddAccessories = () => {
 
   const getAllAccessories = () => {
     axios
-      .get("http://localhost:5000/accessories")
+      .get("https://wash-my-ride.onrender.com/accessories")
       .then((result) => {
         dispatch(setAccessories(result.data.result));
       })
@@ -129,7 +129,7 @@ const AddAccessories = () => {
                     } else {
                       axios
                         .post(
-                          "http://localhost:5000/accessories",
+                          "https://wash-my-ride.onrender.com/accessories",
                           {
                             name: accessoryName,
                             img: accessoryImg,
@@ -247,7 +247,7 @@ const AddAccessories = () => {
                               onClick={() => {
                                 axios
                                   .put(
-                                    `http://localhost:5000/accessories/${id}`,
+                                    `https://wash-my-ride.onrender.com/accessories/${id}`,
                                     {
                                       name: accessoryName,
                                       img: accessoryImg,
@@ -300,7 +300,7 @@ const AddAccessories = () => {
                             onClick={() => {
                               axios
                                 .delete(
-                                  `http://localhost:5000/accessories/${id}`,
+                                  `https://wash-my-ride.onrender.com/accessories/${id}`,
                                   {
                                     headers: {
                                       Authorization: `Bearer ${token}`,

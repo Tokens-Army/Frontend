@@ -48,7 +48,7 @@ const Addadmins = () => {
       return setMessage("Passwords don't match");
     }
     else {
-      axios.post("http://localhost:5000/users/register",{
+      axios.post("https://wash-my-ride.onrender.com/users/register",{
         firstName,
         lastName,
         email,
