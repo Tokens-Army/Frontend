@@ -1,0 +1,13 @@
+.next-button {
+  position: fixed !important;
+  right: 2vw !important;
+  bottom: 1vh !important;
+  width: 10vw !important;
+  background-color: rgb(72, 71, 128) !important;
+}
+.next-button:hover {
+  background-color: #1976D2 !important;
+  width: 12vw !important;
+  height: 7vh !important;
+  transition: 0.45s ease;
+}

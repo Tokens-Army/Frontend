@@ -1,0 +1,9 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.CARDS:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
